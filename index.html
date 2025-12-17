@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Colour Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1> Random Colour Generator</h1>
+
+        <!-- Button that the user clicks to generate a name -->
+        <button id="generateBtn">Generate Colour</button>
+
+        <!-- Area where the generated name will appear -->
+        <div id="colourDisplay"></div>
+    </div>
+
+    <script>
+        // -------------------------------
+        // 1. Create a list (array) of names
+        // -------------------------------
+        const colours = [
+            "Red",
+            "Blue",
+            "Green",
+            "Yellow",
+            "Purple",
+            "Pink",
+            "Black",
+            "White",
+            "Orange",
+            "Crimson",
+            "Grey"
+        ];
+
+        // -------------------------------
+        // 2. Connect JavaScript to HTML elements
+        // -------------------------------
+
+        // Grab the button from HTML using its ID
+        const button = document.getElementById('generateBtn');
+
+        // Grab the empty div where we will display the chosen name
+        const display = document.getElementById('colourDisplay');
+
+        // -------------------------------
+        // 3. Add a click event listener to the button
+        // -------------------------------
+        button.addEventListener('click', function() {
+
+            // Generate a random number from 0 to names.length - 1
+            // Example: if there are 12 names, randomIndex is between 0–11
+            const randomIndex = Math.floor(Math.random() * colours.length);
+
+            // Pick a name from the list using the random index
+            const randomColour = colours[randomIndex];
+
+            // Show the name inside the <div id="nameDisplay">
+            display.textContent = randomColour;
+
+            // (These two lines below were unnecessary duplicates, so removed)
+            // const button = document.getElementById('generateBtn')
+            // const display = document.getElementById('nameDisplay');
+        });
+    </script>
+
+</body>
+</html>
