@@ -44,3 +44,65 @@
             font-weight: bold;
             min-height: 40px;
         }
+
+        /* Tablet & small laptop (≤1024px) */
+@media (max-width: 1024px) {
+    body {
+        padding: 20px;
+        height: auto; /* prevent full viewport height issues */
+    }
+
+    .container {
+        padding: 30px;
+        border-radius: 40px;
+        width: 80%;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 16px;
+        border-radius: 20px;
+    }
+
+    #colourDisplay {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+}
+
+/* Phones & very small screens (≤400px) */
+@media (max-width: 400px) {
+    body {
+        padding: 15px;
+        height: auto;
+    }
+
+    .container {
+        padding: 20px;
+        border-radius: 30px;
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+        border-radius: 18px;
+    }
+
+    #colourDisplay {
+        font-size: 24px;
+        margin-top: 15px;
+        word-break: break-word; /* ensure long color codes don't overflow */
+    }
+}
