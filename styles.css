@@ -76,33 +76,35 @@
     }
 }
 
-/* Phones & very small screens (≤400px) */
-@media (max-width: 400px) {
-    body {
-        padding: 15px;
-        height: auto;
-    }
+@media (max-width: 430px) {
 
-    .container {
-        padding: 20px;
-        border-radius: 30px;
-        width: 95%;
-    }
+  body {
+    padding: 24px;
+    min-height: 100vh;
+  }
 
-    h1 {
-        font-size: 22px;
-        margin-bottom: 15px;
-    }
+  .container {
+    width: 92%;
+    padding: 32px 24px;   /* ⬅️ more vertical padding */
+    border-radius: 36px;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.28);
+  }
 
-    button {
-        padding: 10px 20px;
-        font-size: 14px;
-        border-radius: 18px;
-    }
+  h1 {
+    font-size: 26px;
+    margin-bottom: 26px; /* ⬅️ more breathing room */
+  }
 
-    #colourDisplay {
-        font-size: 24px;
-        margin-top: 15px;
-        word-break: break-word; /* ensure long color codes don't overflow */
-    }
+  button {
+    padding: 16px 26px;  /* ⬅️ taller buttons */
+    font-size: 16px;
+    border-radius: 24px;
+  }
+
+  #colourDisplay {
+    font-size: 28px;
+    margin-top: 26px;
+    min-height: 48px;    /* ⬅️ prevents “flat” look */
+    word-break: break-word;
+  }
 }
