@@ -23,46 +23,26 @@
         // -------------------------------
         const colours = [
             "Red",
+            "Black",
             "Blue",
             "Green",
-            "Yellow",
             "Purple",
-            "Pink",
-            "Black",
+            "Grey",
+            "Yellow",
             "White",
+            "Beige",
             "Orange",
-            "Crimson",
-            "Grey"
+            "Pink",
+            "Brown",
         ];
 
-        // -------------------------------
-        // 2. Connect JavaScript to HTML elements
-        // -------------------------------
-
-        // Grab the button from HTML using its ID
-        const button = document.getElementById('generateBtn');
-
-        // Grab the empty div where we will display the chosen name
-        const display = document.getElementById('colourDisplay');
-
-        // -------------------------------
-        // 3. Add a click event listener to the button
-        // -------------------------------
-        button.addEventListener('click', function() {
-
-            // Generate a random number from 0 to names.length - 1
-            // Example: if there are 12 names, randomIndex is between 0–11
-            const randomIndex = Math.floor(Math.random() * colours.length);
-
-            // Pick a name from the list using the random index
+        const button = document.getElementById("generateBtn");
+        const display = document.getElementById("colourDisplay");
+        
+        button.addEventListener('click', function(){
+           const randomIndex = Math.floor(Math.random() * colours.length);
             const randomColour = colours[randomIndex];
-
-            // Show the name inside the <div id="nameDisplay">
             display.textContent = randomColour;
-
-            // (These two lines below were unnecessary duplicates, so removed)
-            // const button = document.getElementById('generateBtn')
-            // const display = document.getElementById('nameDisplay');
         });
     </script>
 
