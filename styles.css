@@ -78,26 +78,35 @@
 
 @media (max-width: 430px) {
   body {
-    align-items: flex-start;
-    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    min-height: 100vh;
   }
 
   .container {
-    width: 90%;           /* slightly narrower */
-    min-height: 65vh;     /* force vertical presence */
-    padding: 48px 28px;
+    width: 82%;              /* 👈 tighter, cleaner width */
+    padding: 40px 26px;      /* 👈 controlled vertical space */
+    border-radius: 42px;
   }
 
   h1 {
-    font-size: 32px;
+    font-size: 28px;         /* 👈 fits on one line */
+    line-height: 1.25;
+    margin-bottom: 24px;
   }
 
   button {
-    font-size: 18px;
-    padding: 20px 32px;
+    font-size: 17px;
+    padding: 18px 30px;
+    border-radius: 26px;
   }
 
   #colourDisplay {
-    font-size: 34px;
+    font-size: 32px;
+    margin-top: 28px;
+    margin-bottom: 20px;    /* 👈 creates white space BELOW */
+    min-height: 40px;
   }
 }
