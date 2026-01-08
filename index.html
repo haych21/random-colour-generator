@@ -36,14 +36,14 @@
             "Brown",
         ];
 
-        const button = document.getElementById("generateBtn");
-        const display = document.getElementById("colourDisplay");
-        
-        button.addEventListener('click', function(){
-           const randomIndex = Math.floor(Math.random() * colours.length);
-            const randomColour = colours[randomIndex];
-            display.textContent = randomColour;
-        });
+       const button = document.getElementById("generateBtn");
+       const display = document.getElementById("colourDisplay");
+
+       button.addEventListener('click', function(){
+        const randomIndex = Math.floor(Math.random() * colours.length);
+        const randomColour = colours[randomIndex];
+        display.textContent = randomColour;
+       })
     </script>
 
 </body>
